@@ -134,7 +134,7 @@ export function NavBar({ items, className }: NavBarProps) {
             >
               <span className="hidden md:inline">{item.name}</span>
               <span className="md:hidden">
-                <Icon size={18} strokeWidth={2.5} />
+                <Icon size={18} strokeWidth={2.5} className={`${isActive ? 'text-[#FFFFFF]' : 'text-gray-400'}`} />
               </span>
               {isActive && (
                 <motion.div
@@ -155,6 +155,7 @@ export function NavBar({ items, className }: NavBarProps) {
                 </motion.div>
               )}
             </button>
+
           )
         })}
       </div>
