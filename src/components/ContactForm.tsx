@@ -25,7 +25,7 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
   const services = [
     'Customer Support AI Agent',
     'Automated AI-Powered Outreach',
-    'App Development',
+    'Website Development',
     'Custom Automation',
     'AI Voice Caller Assistant',
     'CRM Integration',
