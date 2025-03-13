@@ -3,15 +3,13 @@ import { Calendar, Mail } from 'lucide-react';
 import ContactForm from './ContactForm';
 import SectionTitle from './SectionTitle';
 import { useThemeStore } from '../store/useThemeStore';
-//import { useNavigate } from 'react-router-dom';
 
 const ContactSection = () => {
   const [showContactForm, setShowContactForm] = useState(false);
   const isDark = useThemeStore((state) => state.isDark);
-  //const navigate = useNavigate();
 
-  // Função para gerar o href corretamente usando a URL do React Router
-  const createHref = (path: string) => { // Adicionando o tipo 'string' para o parâmetro
+  // Função para criar a URL com a origem
+  const createHref = (path: string) => {
     return window.location.origin + path; // Cria a URL completa com a origem
   };
 
@@ -49,9 +47,9 @@ const ContactSection = () => {
 
           {/* Link para abrir a página em uma nova aba */}
           <a
-            href={createHref('/schedule-call')}
-            target="_blank"
-            rel="noopener noreferrer" // Adiciona segurança ao abrir a nova aba
+            href={createHref('/schedule-call')} // Gerando o link dinamicamente
+            target="_blank" // Abrir a página em uma nova aba
+            rel="noopener noreferrer" // Segurança adicional ao abrir em uma nova aba
             className={`group relative w-full md:w-64 h-64 ${isDark ? 'bg-black' : 'bg-white'} ${isDark ? 'border-gray-800' : 'border-gray-200'} border rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300`}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#FF6A00] to-[#f9d342] opacity-0 group-hover:opacity-10 transition-opacity" />
