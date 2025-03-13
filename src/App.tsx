@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; 
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
@@ -20,7 +20,6 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 
 const Home = () => {
-
   const location = useLocation();
 
   React.useEffect(() => {
@@ -69,7 +68,6 @@ const Home = () => {
 };
 
 function App() {
-
   return (
     <Router>
       <Routes>
