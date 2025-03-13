@@ -1,7 +1,6 @@
 import { useEffect, useState, useMemo } from 'react';
 import React from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from 'react-router-dom';
 import {
   Clock,
   DollarSign,
@@ -16,7 +15,6 @@ import {
   SlidersHorizontal,
 } from 'lucide-react';
 import { ThemeToggle } from '../components/ui/ThemeToggle';
-const navigate = useNavigate();
 import { useThemeStore } from '../store/useThemeStore';
 
 import CustomCursor from '../components/CustomCursor';
@@ -31,9 +29,12 @@ import AvailabilityAnimation from '../components/animations/AvailabilityAnimatio
 import TimeSavingsAnimation from '../components/animations/TimeSavingsAnimation';
 import { useLocation } from 'react-router-dom';
 import '../index.css';
+import { useNavigate } from 'react-router-dom';
+
 
 const CustomerSupportAI = () => {
   const isDark = useThemeStore((state) => state.isDark);
+  const navigate = useNavigate();
   const location = useLocation();
   const [titleNumber, setTitleNumber] = useState(0);
   const [showContactForm, setShowContactForm] = useState(false);
@@ -58,7 +59,7 @@ const CustomerSupportAI = () => {
     }
   };
 
- 
+  
 
   useEffect(() => {
     const handleScroll = () => {
