@@ -20,7 +20,6 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 
 const Home = () => {
-  console.log("Home componente renderizado");
 
   const location = useLocation();
 
@@ -70,7 +69,6 @@ const Home = () => {
 };
 
 function App() {
-  console.log("App está sendo renderizado");
 
   return (
     <Router>
