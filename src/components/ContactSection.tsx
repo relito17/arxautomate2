@@ -3,14 +3,16 @@ import { Calendar, Mail } from 'lucide-react';
 import ContactForm from './ContactForm';
 import SectionTitle from './SectionTitle';
 import { useThemeStore } from '../store/useThemeStore';
+import { useNavigate } from 'react-router-dom';
 
 const ContactSection = () => {
   const [showContactForm, setShowContactForm] = useState(false);
   const isDark = useThemeStore((state) => state.isDark);
+  const navigate = useNavigate();
 
-  const handleScheduleCall = () => {
+  /*const handleScheduleCall = () => {
     window.open('/schedule-call', '_blank');
-  };
+  };*/
 
   return (
     <section id="contact" className={`py-20 ${isDark ? 'bg-black' : 'bg-white'}`}>
@@ -45,7 +47,7 @@ const ContactSection = () => {
           </button>
 
           <button
-            onClick={handleScheduleCall}
+            onClick={() => navigate('/schedule-call')}
             className={`group relative w-full md:w-64 h-64 ${isDark ? 'bg-black' : 'bg-white'} ${isDark ? 'border-gray-800' : 'border-gray-200'} border rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300`}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#FF6A00] to-[#f9d342] opacity-0 group-hover:opacity-10 transition-opacity" />
