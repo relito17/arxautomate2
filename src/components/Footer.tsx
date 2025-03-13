@@ -2,6 +2,7 @@ import { Instagram, Linkedin } from 'lucide-react';
 import { useThemeStore } from '../store/useThemeStore';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -11,8 +12,12 @@ const scrollToTop = () => {
 
 
 
+
 const Footer = () => {
   const isDark = useThemeStore((state) => state.isDark);
+
+  const navigate = useNavigate();
+
 
   return (
     <footer className={`${isDark ? 'bg-black border-gray-800' : 'bg-white border-gray-200'} border-t`}>
@@ -50,7 +55,7 @@ const Footer = () => {
           
           {/* Privacy Links */}
           <div className="flex justify-center gap-8 mb-8 text-sm">
-            <a href="/privacy-policy" className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
+            <a onClick={() => navigate('/privacy-policy')} className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
               Privacy Policy
             </a>
             <a href="/terms" className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
