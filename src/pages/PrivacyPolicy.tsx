@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p className="text-gray-300">
-              This Privacy Policy explains how ARxAutomate ("we," "us," or "our") collects, uses, and protects your information when you use our website and services.
+              This Privacy Policy explains how ARxAutomate collects, uses, and protects your information when you use our website and services.
             </p>
           </section>
 

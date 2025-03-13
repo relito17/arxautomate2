@@ -1,8 +1,15 @@
+import { useEffect} from 'react';
 import BackButton from '../components/BackButton';
 import Footer from '../components/Footer';
 import CustomCursor from '../components/CustomCursor';
+import { useLocation } from 'react-router-dom';
 
-const TermsOfService = () => {
+const   TermsOfService = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location]);
   return (
     <div className="min-h-screen bg-black text-white">
       <CustomCursor />
