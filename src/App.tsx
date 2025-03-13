@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
@@ -25,6 +20,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 
 const Home = () => {
+  console.log("Home componente renderizado");
+
   const location = useLocation();
 
   React.useEffect(() => {
@@ -73,6 +70,8 @@ const Home = () => {
 };
 
 function App() {
+  console.log("App está sendo renderizado");
+
   return (
     <Router>
       <Routes>
