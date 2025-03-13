@@ -7,7 +7,7 @@ import { useThemeStore } from '../store/useThemeStore';
 
 const Hero = () => {
   const isDark = useThemeStore((state) => state.isDark);
-  console.log("Modo atual:", isDark ? "Escuro" : "Claro");
+  
 
 
   const scrollToContact = () => {
