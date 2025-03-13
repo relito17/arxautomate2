@@ -69,7 +69,7 @@ const Home = () => {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/arxautomate2">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/schedule-call" element={<ScheduleCall />} />
