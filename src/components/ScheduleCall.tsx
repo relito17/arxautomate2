@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom'; // Importando useLocation
 import Cal, { getCalApi } from '@calcom/embed-react';
 
-
 const ScheduleCall = () => {
+  const location = useLocation(); // Obtendo a localização atual
+
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: '30min' });
@@ -19,8 +21,9 @@ const ScheduleCall = () => {
   }, []);
 
   useEffect(() => {
+    // Rolar para o topo da página sempre que a localização mudar
     window.scrollTo(0, 0);
-  }, [location]);
+  }, [location]); // Dependência de location para garantir que role quando a página mudar
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4" style={{ cursor: 'auto' }}>
