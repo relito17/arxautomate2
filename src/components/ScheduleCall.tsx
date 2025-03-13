@@ -18,6 +18,10 @@ const ScheduleCall = () => {
     })();
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4" style={{ cursor: 'auto' }}>
       <style>

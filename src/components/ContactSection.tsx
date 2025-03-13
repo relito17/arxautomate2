@@ -3,12 +3,11 @@ import { Calendar, Mail } from 'lucide-react';
 import ContactForm from './ContactForm';
 import SectionTitle from './SectionTitle';
 import { useThemeStore } from '../store/useThemeStore';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Importando o Link do React Router
 
 const ContactSection = () => {
   const [showContactForm, setShowContactForm] = useState(false);
   const isDark = useThemeStore((state) => state.isDark);
-  const navigate = useNavigate();
 
   /*const handleScheduleCall = () => {
     window.open('/schedule-call', '_blank');
@@ -20,7 +19,7 @@ const ContactSection = () => {
         <SectionTitle title="Contact Us" />
         <div className="text-center mb-16 reveal">
           <h1 className={`text-5xl md:text-7xl font-bold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            Your Journey Begins <br></br>
+            Your Journey Begins <br />
             <span className="gradient-text">
               {' '}
               <em>Here </em>
@@ -46,8 +45,9 @@ const ContactSection = () => {
             </div>
           </button>
 
-          <button
-            onClick={() => navigate('/schedule-call')}
+          <Link
+            to="/schedule-call"
+            target="_blank" // Adicionando o atributo target="_blank" para abrir em uma nova aba
             className={`group relative w-full md:w-64 h-64 ${isDark ? 'bg-black' : 'bg-white'} ${isDark ? 'border-gray-800' : 'border-gray-200'} border rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300`}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#FF6A00] to-[#f9d342] opacity-0 group-hover:opacity-10 transition-opacity" />
@@ -58,7 +58,7 @@ const ContactSection = () => {
                 Book a time to discuss your needs with our team
               </p>
             </div>
-          </button>
+          </Link>
         </div>
       </div>
 
