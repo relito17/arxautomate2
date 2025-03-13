@@ -58,7 +58,7 @@ const Footer = () => {
             <a onClick={() => navigate('/privacy-policy')} className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
               Privacy Policy
             </a>
-            <a href="/terms" className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
+            <a onClick={() => navigate('/terms')} className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
               Terms of Service
             </a>
           </div>
