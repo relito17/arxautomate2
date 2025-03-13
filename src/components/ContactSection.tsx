@@ -3,15 +3,17 @@ import { Calendar, Mail } from 'lucide-react';
 import ContactForm from './ContactForm';
 import SectionTitle from './SectionTitle';
 import { useThemeStore } from '../store/useThemeStore';
-import { Link } from 'react-router-dom'; // Importando o Link do React Router
+//import { useNavigate } from 'react-router-dom';
 
 const ContactSection = () => {
   const [showContactForm, setShowContactForm] = useState(false);
   const isDark = useThemeStore((state) => state.isDark);
+  //const navigate = useNavigate();
 
-  /*const handleScheduleCall = () => {
-    window.open('/schedule-call', '_blank');
-  };*/
+  // Função para gerar o href corretamente usando a URL do React Router
+  const createHref = (path: string) => { // Adicionando o tipo 'string' para o parâmetro
+    return window.location.origin + path; // Cria a URL completa com a origem
+  };
 
   return (
     <section id="contact" className={`py-20 ${isDark ? 'bg-black' : 'bg-white'}`}>
@@ -45,9 +47,11 @@ const ContactSection = () => {
             </div>
           </button>
 
-          <Link
-            to="/schedule-call"
-            target="_blank" // Adicionando o atributo target="_blank" para abrir em uma nova aba
+          {/* Link para abrir a página em uma nova aba */}
+          <a
+            href={createHref('/schedule-call')}
+            target="_blank"
+            rel="noopener noreferrer" // Adiciona segurança ao abrir a nova aba
             className={`group relative w-full md:w-64 h-64 ${isDark ? 'bg-black' : 'bg-white'} ${isDark ? 'border-gray-800' : 'border-gray-200'} border rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300`}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#FF6A00] to-[#f9d342] opacity-0 group-hover:opacity-10 transition-opacity" />
@@ -58,7 +62,7 @@ const ContactSection = () => {
                 Book a time to discuss your needs with our team
               </p>
             </div>
-          </Link>
+          </a>
         </div>
       </div>
 
