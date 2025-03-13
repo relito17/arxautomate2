@@ -1,8 +1,13 @@
 import BackButton from '../components/BackButton';
+import { useEffect} from 'react';
 import Footer from '../components/Footer';
 import CustomCursor from '../components/CustomCursor';
 
 const PrivacyPolicy = () => {
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location]);
   return (
     <div className="min-h-screen bg-black text-white">
       <CustomCursor />
