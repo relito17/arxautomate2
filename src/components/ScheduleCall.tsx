@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom'; // Importando useLocation
 import Cal, { getCalApi } from '@calcom/embed-react';
+import BackButton from '../components/BackButton';
 
 const ScheduleCall = () => {
   const location = useLocation(); // Obtendo a localização atual
@@ -34,6 +35,7 @@ const ScheduleCall = () => {
           }
         `}
       </style>
+      <BackButton />
       
       <div className="text-center max-w-2xl mb-8">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">

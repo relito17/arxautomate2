@@ -11,6 +11,7 @@ import {
   RefreshCw,
 } from 'lucide-react';
 import { ThemeToggle } from '../components/ui/ThemeToggle';
+import { useNavigate } from 'react-router-dom';
 import { useThemeStore } from '../store/useThemeStore';
 
 import CustomCursor from '../components/CustomCursor';
@@ -25,6 +26,7 @@ const words = ["Engagement", "Conversions", "Growth", "Success", "ROI"];
 
 const AIOutreach = () => {
   const isDark = useThemeStore((state) => state.isDark);
+  const navigate = useNavigate();
   const location = useLocation();
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
@@ -89,9 +91,7 @@ const AIOutreach = () => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  const handleScheduleCall = () => {
-    window.open('/schedule-call', '_blank');
-  };
+  
 
   return (
     <div className={`min-h-screen ${isDark ? 'bg-black text-white' : 'bg-white text-gray-900'} font-inter`}>
@@ -144,7 +144,7 @@ const AIOutreach = () => {
 
       <div className="flex gap-6 justify-center">
         <button
-          onClick={handleScheduleCall}
+          onClick={() => navigate('/schedule-call')}
           className="bg-gradient-to-r from-[#FF6A00] to-[#f9d342] text-black px-8 py-4 rounded-lg text-lg font-semibold hover:scale-105 transition-transform flex items-center gap-2"
         >
           Schedule Demo
@@ -350,7 +350,7 @@ const AIOutreach = () => {
     </p>
     <div className="flex gap-6 justify-center">
       <button
-        onClick={handleScheduleCall}
+        onClick={() => navigate('/schedule-call')}
         className="bg-gradient-to-r from-[#FF6A00] to-[#f9d342] text-black px-8 py-4 rounded-lg text-lg font-semibold hover:scale-105 transition-transform flex items-center gap-2"
       >
         Schedule Demo

@@ -1,6 +1,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from 'react-router-dom';
 import {
   Clock,
   DollarSign,
@@ -15,6 +16,7 @@ import {
   SlidersHorizontal,
 } from 'lucide-react';
 import { ThemeToggle } from '../components/ui/ThemeToggle';
+const navigate = useNavigate();
 import { useThemeStore } from '../store/useThemeStore';
 
 import CustomCursor from '../components/CustomCursor';
@@ -56,9 +58,7 @@ const CustomerSupportAI = () => {
     }
   };
 
-  const handleScheduleCall = () => {
-    window.open('/schedule-call', '_blank');
-  };
+ 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -152,7 +152,7 @@ const CustomerSupportAI = () => {
 
       <div className="flex gap-6 justify-center">
         <button
-          onClick={handleScheduleCall}
+          onClick={() => navigate('/schedule-call')}
           className="bg-gradient-to-r from-[#FF6A00] to-[#f9d342] text-black px-8 py-4 rounded-lg text-lg font-semibold hover:scale-105 transition-transform flex items-center gap-2">
           Schedule Demo
           <ArrowRight className="w-5 h-5" />
@@ -416,7 +416,7 @@ const CustomerSupportAI = () => {
     </p>
     <div className="flex gap-6 justify-center">
       <button
-        onClick={handleScheduleCall}
+        onClick={() => navigate('/schedule-call')}
         className="bg-gradient-to-r from-[#FF6A00] to-[#f9d342] text-black px-8 py-4 rounded-lg text-lg font-semibold hover:scale-105 transition-transform flex items-center gap-2">
         Schedule Demo
         <ArrowRight className="w-5 h-5" />
