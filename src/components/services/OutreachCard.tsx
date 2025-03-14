@@ -53,7 +53,7 @@ const OutreachCard = ({ onClick }: { onClick: () => void }) => {
         <div className="mt-4 sm:mt-6 flex items-center gap-2 text-[#FFA100] font-semibold ">
         <button 
           onClick={() => navigate('/ai-outreach')}
-          className="mt-4 sm:mt-6 flex items-center gap-2 text-[#FFA100] font-semibold"
+          className="mt-4 sm:mt-6 flex items-center gap-2 text-[#FFA100] font-semibold border border-[#FFA100] rounded-lg px-4 py-2 transition duration-300 hover:shadow-[0_0_10px_#FFA100]"
         >
           Learn More
           <svg
@@ -69,6 +69,8 @@ const OutreachCard = ({ onClick }: { onClick: () => void }) => {
             />
           </svg>
         </button>
+
+
         </div>
       </div>
       
