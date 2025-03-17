@@ -299,7 +299,7 @@ const AIOutreach = () => {
           title: 'AI Writing Assistant',
           features: [
             'Dynamic content personalization for each recipient',
-            'Smart A/B testing for continuous improvement'
+            'Smart A/Z testing for continuous improvement'
           ],
           
         },
