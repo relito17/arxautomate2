@@ -61,6 +61,9 @@ const Footer = () => {
             <a onClick={() => navigate('/terms')} className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
               Terms of Service
             </a>
+            <a onClick={() => navigate('/cookie-policy')} className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
+              Cookie Policy
+            </a>
           </div>
           
           <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>
