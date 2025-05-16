@@ -69,11 +69,11 @@ const AIAgentCard = () => {
             <Headphones className="w-8 h-8" style={{ color: '#FFA100' }} />
           </div>
           <h3 className="text-xl sm:text-2xl font-bold">
-            Customer Support AI Agent
+          AI Agent Development
           </h3>
         </div>
         <p className="text-gray-400 text-sm sm:text-base">
-          Deliver 24/7 instant support with our AI-powered agent—ensuring
+        We develop advanced voice and text agents that are able to answer customer and internal queries—ensuring
           customer satisfaction and freeing up your team to focus on growth!
         </p>
         {/* Learn More CTA */}

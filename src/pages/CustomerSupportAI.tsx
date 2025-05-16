@@ -230,13 +230,13 @@ const CustomerSupportAI = () => {
                   icon: <Clock className="w-8 h-8" />,
                   title: 'Slow Response Times',
                   description:
-                    "Customers leave when they don't get answers fast enough. Every second you delay, you're losing trust—and sales.",
+                    "Customers leave when they don't get answers fast enough. Every second you delay, you're losing trust.",
                 },
                 {
                   icon: <XCircle className="w-8 h-8" />,
                   title: 'No Sales-Driven Support',
                   description:
-                    "Support isn't just about solving problems; it's about converting opportunities. Poor routing and guidance frustrate customers instead of helping them buy.",
+                    "Support isn't just about solving problems; it's about converting opportunities.",
                 },
                 {
                   icon: <DollarSign className="w-8 h-8" />,

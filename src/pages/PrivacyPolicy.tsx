@@ -75,9 +75,13 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="text-2xl font-semibold mb-4">7. Contact Us</h2>
             <p className="text-gray-300">
-              If you have any questions about this Privacy Policy or our practices, please contact us at angelo@tryarxautomate.com
+              If you have any questions about this Privacy Policy or our practices, please contact us at <a href="mailto:angelo@tryarxautomate.com" className="underline text-blue-400">angelo@tryarxautomate.com</a>.
             </p>
           </section>
+        </div>
+        {/* Last updated date */}
+        <div className="mt-16 text-sm text-gray-400 text-center">
+          Last updated: March 15, 2025
         </div>
       </div>
       <Footer />

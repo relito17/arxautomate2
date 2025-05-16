@@ -1,6 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
+import { useEffect } from 'react';
+import { initGA, sendPageView } from './ga';
+
+
 import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -18,6 +22,8 @@ import AppDevelopment from './pages/AppDevelopment';
 import ScheduleCall from './components/ScheduleCall';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import CookiesPolicy from './pages/CookiePolicy';
+import CookieConsent from './components/CookieConsent';
 
 const Home = () => {
   const location = useLocation();
@@ -43,6 +49,15 @@ const Home = () => {
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
+  }, [location]);
+
+  /* tracking*/
+  useEffect(() => {
+    initGA(); // só uma vez, ao carregar o app
+  }, []);
+  
+  useEffect(() => {
+    sendPageView(location.pathname + location.search); // sempre que muda de página
   }, [location]);
 
   return (
@@ -79,7 +94,9 @@ function App() {
         <Route path="/custom-automations" element={<CustomAutomation />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/cookie-policy" element={<CookiesPolicy />} />
       </Routes>
+      <CookieConsent />
     </Router>
   );
 }
