@@ -24,7 +24,7 @@ const BackToTopButton = () => {
     <button
       onClick={scrollToTop}
       className={cn(
-        "fixed bottom-6 right-6 p-3 rounded-full shadow-lg transition-all duration-300 z-50",
+        "fixed bottom-6 left-6 p-3 rounded-full shadow-lg transition-all duration-300 z-50",
         "hover:scale-110 active:scale-95",
         isDark 
           ? "bg-gradient-to-r from-[#FF6A00] to-[#f9d342] text-black" 
