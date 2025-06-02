@@ -299,7 +299,7 @@ body, a, button, input, textarea, [role="button"], [onclick], .cursor-pointer {
   width: 120px;
   height: 2px;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0), white);
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 @keyframes shoot {

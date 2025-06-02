@@ -29,35 +29,45 @@ const WhyUs = () => {
             </strong>
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-16 reveal">
-          {[ 
-            { value: 'Reduce 90%', label: 'Human Error ' },
-            { value: 'Save 3000+', label: 'Human Hours' },
-            { value: '99.9%', label: 'Uptime Guaranteed' },
-            { value: '-65%', label: 'Operational Cost' },
-            {
-              value: '94%',
-              label: ' Report Improvements in Customer Satisfaction',
-            },
-            { value: '95%', label: 'Efficiency Increase' },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className={`feature-card text-center p-6 rounded-2xl ${isDark ? 'bg-gradient-to-br' : 'bg-gray-50'}`}
-            >
-              <div className="stats-gradient text-3xl md:text-4xl font-bold mb-2">
-                <span
-                  className={`${isDark ? '' : 'text-gray-700'}`} // dark mode keeps the default color, light mode adds a darker color
-                >
-                  {stat.value}
-                </span>
-              </div>
-              <p className={`text-sm md:text-base ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-16  reveal">
+  {[
+    { value: 'Reduce 90%', label: 'Human Error ' },
+    { value: 'Save 3000+', label: 'Human Hours' },
+    { value: '99.9%', label: 'Uptime Guaranteed' },
+    { value: '-65%', label: 'Operational Cost' },
+    {
+      value: '94%',
+      label: ' Report Improvements in Customer Satisfaction',
+    },
+    { value: '95%', label: 'Efficiency Increase' },
+  ].map((stat, index) => (
+    <div
+      key={index}
+      className={`feature-card text-center  p-6 rounded-2xl shadow-xl  border-white/10 backdrop-blur-lg bg-white/5 ${
+        isDark ? 'bg-gradient-to-br' : 'bg-gray-50'
+      }`}
+    >
+      
+      <div className="text-3xl md:text-4xl font-bold mb-2">
+        <span
+          className={`${
+            isDark ? 'text-white-700' : 'text-gray-700'
+          }`}
+        >
+          {stat.value}
+        </span>
+      </div>
+      <p
+        className={`text-sm md:text-base ${
+          isDark ? 'text-gray-400' : 'text-gray-600'
+        }`}
+      >
+        {stat.label}
+      </p>
+    </div>
+  ))}
+</div>
+
 
         <div className="grid md:grid-cols-2 gap-8 reveal">
           {[ 

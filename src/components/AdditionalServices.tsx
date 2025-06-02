@@ -360,7 +360,7 @@ const AdditionalServices = () => {
           <h1 className={`text-4xl md:text-6xl font-bold mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
             Beyond the Basics:{' '}
             <span className="gradient-text">
-              <em>Expanded Solutions </em>
+              <em>Expanded &nbsp; {'  '} Solutions </em>
             </span>
           </h1>
           <p className={`text-lg md:text-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>

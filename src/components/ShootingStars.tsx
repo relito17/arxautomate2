@@ -24,7 +24,7 @@ const ShootingStars = () => {
 
     const interval = setInterval(() => {
       for (let i = 0; i < 1; i++) createStar(); // Generate multiple stars per interval
-    }, 150); // Faster interval for more stars
+    }, 85); // Faster interval for more stars
 
     return () => clearInterval(interval);
   }, []);

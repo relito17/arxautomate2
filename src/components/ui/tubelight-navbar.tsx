@@ -17,7 +17,7 @@ interface NavBarProps {
 export function NavBar({ items, className }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(items[0].name)
   const [, setIsMobile] = useState(false)
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
   const [isManualNavigation, setIsManualNavigation] = useState(false)
 
   // Removido o código relacionado ao setLastScrollY e scroll
@@ -42,7 +42,7 @@ export function NavBar({ items, className }: NavBarProps) {
       if (currentScrollY > 100 || activeTab !== 'Home') {
         setVisible(true)
       } else {
-        setVisible(false)
+        setVisible(true) //mudar para false para so aparecer apos scroll
       }
 
       const sections = items.map(item => item.url)

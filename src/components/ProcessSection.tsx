@@ -125,7 +125,7 @@ const ProcessSection = () => {
         <div className="mt-16 text-center reveal">
           <button 
             onClick={scrollToContact}
-            className="bg-gradient-to-r from-[#FF6A00] to-[#f9d342] text-black px-8 py-4 rounded-lg text-lg font-semibold hover:scale-105 transition-transform"
+            className="group relative bg-gradient-to-r from-[#FF6A00] to-[#f9d342] text-black px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_#f9d342] overflow-hidden"
           >
             Start Your Journey Now
           </button>
