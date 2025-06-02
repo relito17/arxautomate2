@@ -23,7 +23,7 @@ import ScheduleCall from './components/ScheduleCall';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import CookiesPolicy from './pages/CookiePolicy';
-import CookieConsent from './components/CookieConsent';
+
 
 const Home = () => {
   const location = useLocation();
@@ -96,7 +96,6 @@ function App() {
         <Route path="/terms" element={<TermsOfService />} />
         <Route path="/cookie-policy" element={<CookiesPolicy />} />
       </Routes>
-      <CookieConsent />
     </Router>
   );
 }
