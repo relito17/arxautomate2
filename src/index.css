@@ -9,14 +9,16 @@
 
 @font-face {
   font-family: 'Mokoto';
-  src: url('/project/fonts/mokoto/ttf/mokoto-mokoto-regular-400.ttf') format('truetype');
+  src: url('/fonts/mokoto/ttf/mokoto-mokoto-regular-400.ttf') format('truetype'),
+       url('/fonts/mokoto/otf/mokoto-mokoto-regular-400.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Mokoto Glitch Mark 2';
-  src: url('/project/fonts/mokoto/ttf/mokoto-mokoto-regular-glitch-mark-1-400.ttf') format('truetype');
+  src: url('/fonts/mokoto/ttf/mokoto-mokoto-regular-glitch-mark-1-400.ttf') format('truetype'),
+       url('/fonts/mokoto/otf/mokoto-mokoto-regular-glitch-mark-1-400.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }

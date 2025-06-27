@@ -24,10 +24,19 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col items-center justify-center text-center mb-8">
           <div className="mb-4">
-            <div className="text-2xl font-bold" onClick={scrollToTop}>
+            <div className="text-2xl tracking-[5px] font-normal whitespace-nowrap " onClick={scrollToTop}
+            style={{ fontFamily: 'Mokoto' }}>
               <button>
-                <span className={isDark ? 'text-white' : 'text-gray-900'}>AR</span>
-                <span className="gradient-text">x</span>
+                <span className={isDark ? 'text-white' : 'text-gray-900'}
+                
+        >
+          AR</span>
+                <span className="gradient-text"
+                 style={{
+              fontFamily: 'Orbitron',
+              fontWeight: 800,
+            }}
+            >x</span>
                 <span className={isDark ? 'text-white' : 'text-gray-900'}>Automate</span>
               </button>  
             </div>
