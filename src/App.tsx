@@ -15,7 +15,7 @@ import Testimonials from './components/Testimonials';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import BackToTop from "../src/components/ui/BackToTopButton";
-import CustomerSupportAI from './pages/CustomerSupportAI';
+import CustomerSupportAI from './pages/CustomerSupportAI/CustomerSupportAI';
 import CustomAutomation from './pages/CustomAutomation';
 import AIOutreach from './pages/AIOutreach';
 import AppDevelopment from './pages/AppDevelopment';

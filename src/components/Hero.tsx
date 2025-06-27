@@ -49,16 +49,25 @@ const Hero = () => {
         <ThemeToggle />
       </div>
 
-      {/* Logo and brand (top-left) */}
-      <div className="absolute top-5 left-5 z-50 flex items-center gap-2">
-        <img src={logo} alt="ARxAutomate Logo" className="h-12" />
+      {/* Logo and brand (top-left) - Versão melhorada */}
+      <div className="absolute top-5 left-5 z-50 flex items-center gap-2 max-w-[calc(100vw-200px)] xl:max-w-none">
+        <img src={logo} alt="ARxAutomate Logo" className="hidden sm:block h-10 sm:h-12 flex-shrink-0" />
         <h1
-          className={`hidden lg:block text-xl md:text-2xl font-bold ${
+          className={`hidden xl:block text-xl 2xl:text-2xl tracking-[5px] font-normal whitespace-nowrap ${
             isDark ? 'text-white' : 'text-gray-900'
           }`}
+          style={{ fontFamily: 'Mokoto' }}
         >
           <span>AR</span>
-          <span className="gradient-text">x</span>
+          <span
+            className="inline-block scale-90 transform origin-bottom gradient-text"
+            style={{
+              fontFamily: 'Orbitron',
+              fontWeight: 800,
+            }}
+          >
+            x
+          </span>
           <span>Automate</span>
         </h1>
       </div>
@@ -79,19 +88,45 @@ const Hero = () => {
 
       {/* Centered content */}
       <div className="relative z-10 w-full max-w-4xl px-6 text-center">
-        <div className="bg-white/5 border border-white/10 backdrop-blur-lg rounded-3xl p-10 shadow-2xl animate-fade-in-up">
-          {/* Mobile business name */}
+        <div className="bg-white/5 border border-white/10 backdrop-blur-lg rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl animate-fade-in-up">
+          
+          {/* Logo centrado para telas médias (tablets e desktops pequenos) */}
           <div
-            className={`lg:hidden mb-4 text-2xl sm:text-3xl font-bold ${
+            className={`hidden sm:block xl:hidden mb-6 text-2xl md:text-3xl tracking-[6px] ${
               isDark ? 'text-white' : 'text-gray-900'
             }`}
+            style={{ fontFamily: 'Mokoto' }}
           >
             <span>AR</span>
-            <span className="gradient-text">x</span>
+            <span
+              className="inline-block scale-90 transform origin-bottom gradient-text"
+              style={{
+                fontFamily: 'Orbitron',
+                fontWeight: 800,
+              }}
+            >
+              x
+            </span>
             <span>Automate</span>
           </div>
 
-          <h1 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight ${
+          {/* Mobile business name - aparece apenas em telas muito pequenas */}
+          <div
+            className={`sm:hidden mb-4 text-2xl tracking-[5px] ${
+              isDark ? 'text-white' : 'text-gray-900'
+            } font-mokoto`}
+          >
+            <span>AR</span>
+            <span className="gradient-text scale-90 transform"
+            style={{
+                fontFamily: 'Orbitron',
+                fontWeight: 800,
+              }}
+              >x</span>
+            <span>Automate</span>
+          </div>
+
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight ${
               isDark ? 'text-white' : 'text-gray-900'}`}>
             AI-Powered Systems to{' '}
             <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
@@ -118,11 +153,9 @@ const Hero = () => {
             Your Business
           </h1>
 
-          <p className={`mt-6 text-lg md:text-xl text-gray-300 font-light ${
+          <p className={`mt-6 text-base sm:text-lg md:text-xl font-light ${
               isDark ? 'text-gray-300' : 'text-gray-600'}`}>
             ARxAutomate streamlines your business — you lead, we automate.
-
-
           </p>
 
           {/* Buttons container */}
@@ -130,7 +163,7 @@ const Hero = () => {
             {/* Our Services button */}
             <button
               onClick={scrollToServices}
-              className={`group relative px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 border-2 ${
+              className={`group relative px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 border-2 ${
                 isDark 
                   ? 'bg-white/10 border-white/20 text-white hover:bg-white/20 hover:shadow-[0_0_25px_rgba(255,255,255,0.3)]'
                   : 'bg-gray-900/10 border-gray-900/20 text-gray-900 hover:bg-gray-900/20 hover:shadow-[0_0_25px_rgba(0,0,0,0.2)]'
@@ -138,7 +171,7 @@ const Hero = () => {
             >
               <span className="relative z-10 flex items-center gap-2">
                 Our Services
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </span>
               <span className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-30 transition duration-300 blur-lg ${
                 isDark ? 'bg-white/30' : 'bg-gray-900/30'
@@ -148,10 +181,10 @@ const Hero = () => {
             {/* Jump on a Call button */}
             <button
               onClick={scrollToContact}
-              className="group relative bg-gradient-to-r from-[#FF6A00] to-[#f9d342] text-black px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_#f9d342] overflow-hidden"
+              className="group relative bg-gradient-to-r from-[#FF6A00] to-[#f9d342] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_#f9d342] overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-2">
-                <Phone className="w-5 h-5" />
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                 Jump on a Call
               </span>
               <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-50 transition duration-300 bg-white/30 blur-lg" />

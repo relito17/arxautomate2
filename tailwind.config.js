@@ -5,6 +5,9 @@ export default {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        mokoto: ['Mokoto', 'sans-serif'],
+        'mokoto-glitch': ['Mokoto Glitch Mark 2', 'sans-serif'],
+        orbitron: ['Orbitron', 'sans-serif'],
       },
       animation: {
         'bounce-slow': 'bounce 3s linear infinite',
@@ -25,4 +28,4 @@ export default {
     },
   },
   plugins: [],
-};
+}

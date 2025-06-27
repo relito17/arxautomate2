@@ -38,7 +38,7 @@ const Footer = () => {
             <div className="flex gap-4 justify-center">
               {[{ icon: <FontAwesomeIcon icon={faXTwitter} className={`w-5 h-5 ${isDark ? 'text-white' : 'text-black'}`} />, href: 'https://x.com/arxautomate' },
                 { icon: <Instagram className={`w-5 h-5 ${isDark ? 'text-white' : 'text-black'}`} />, href: 'https://www.instagram.com/arxautomate/' },
-                { icon: <Linkedin className={`w-5 h-5 ${isDark ? 'text-white' : 'text-black'}`} />, href: 'https://www.linkedin.com/company/106875360/admin/dashboard/' }
+                { icon: <Linkedin className={`w-5 h-5 ${isDark ? 'text-white' : 'text-black'}`} />, href: 'https://www.linkedin.com/company/arxautomate/' }
               ].map((social, index) => (
                 <a
                   key={index}
