@@ -5,7 +5,7 @@ import {
 
 import { useThemeStore } from '../../store/useThemeStore';
 
-//import Botchat from '../Botchat';
+import Botchat from '../../Botchat';
 
 import '../../index.css';
 
@@ -52,9 +52,9 @@ const DeployInSeconds = () => {
               </p>
             </div>
 
-         {/* ai chat in development   <div className={`rounded-lg bg-black p-4 ${isDark ? 'shadow-lg' : 'shadow-lg'} flex justify-center`}>
+         <div className={`rounded-lg bg-black p-4 ${isDark ? 'shadow-lg' : 'shadow-lg'} flex justify-center`}>
               <Botchat /> 
-            </div>*/}
+            </div>
           </div>
         </div>
       </section>
